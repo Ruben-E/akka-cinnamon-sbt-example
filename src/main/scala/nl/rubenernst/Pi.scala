@@ -16,8 +16,13 @@ object Pi extends App {
     }
 
     def calculate: Unit = {
-      val master = context.system.actorOf(Props(new Master(6, 10000, 10000, self)))
+      val master = context.system.actorOf(Props(new Master(random(2, 10), random(5000, 15000), random(5000, 15000), self)))
       master ! Calculate
+    }
+
+    def random(start: Int, end: Int): Int = {
+      val rnd = new scala.util.Random
+      start + rnd.nextInt( (end - start) + 1 )
     }
   }
 
