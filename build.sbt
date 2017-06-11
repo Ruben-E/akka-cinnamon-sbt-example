@@ -15,6 +15,7 @@ version := "1.0"
 scalaVersion := "2.11.11"
 
 libraryDependencies += Cinnamon.library.cinnamonCHMetrics
+libraryDependencies += Cinnamon.library.cinnamonCHMetricsJvmMetrics
 libraryDependencies += Cinnamon.library.cinnamonCHMetricsStatsDReporter
 libraryDependencies += Cinnamon.library.cinnamonAkka
 
